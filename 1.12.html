@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:200px;
+		height:200px;
+		background-color: #e3e3e3;
+		margin:2px;
+		float:left;
+	}
+</style>
+<script>
+	window.onload = function(){
+		function getClass(classname){
+			if(document.getElementByClassName){
+				return document.getElementByClassName(classname);
+			} 
+				var arr=[];
+				var both = document.getElementsByTagName('*');
+				for(var i=0;i<both.length;i++){
+				 	if(both[i].className == classname){
+				 		arr.push(both[i]);
+				 	}
+				 }
+				 return arr;
+		}
+		 alert(getClass('demo').length);
+	}
+</script>
+<body>
+<div></div>
+<div></div>
+<div class='demo'></div>
+<div></div>
+<div></div>
+<div></div>
+<div class='demo'></div>
+<div></div>
+<div></div>
+<div class='demo'></div>
+</body>
+</html>

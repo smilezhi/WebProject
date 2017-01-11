@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		background:url(images/01.jpg);
+	}
+</style>
+<body>
+<select name="" id="selt">
+	<option value="1">春天</option>
+	<option value="2">夏天</option>
+	<option value="3">秋天</option>
+	<option value="4">冬天</option>
+</select>
+<script>
+	var opt = document.getElementById('selt');
+	opt.onchange = function(){
+		switch(this.value){
+			case '1': 
+				document.body.style.background ='url(images/01.jpg)';
+				console.log(1);
+				break;
+			case '2': 
+				document.body.style.background ='url(images/02.jpg)';
+				console.log(2);
+				break;
+		}
+	}
+</script>
+</body>
+</html>

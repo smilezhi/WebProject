@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	$(document).ready(function(){
+		$('#box1').css({
+			"display": "none",
+			"width": "200px",
+			"height": "200px",
+			"background": "pink"
+		});
+		$('button[0]').click(function(){
+			$('div').show();	
+		});
+	})
+
+</script>
+<body>
+	<button class='btn'>按钮1</button>
+	<button class='btn'>按钮2</button>
+	<div id="box1"></div>
+</body>
+</html>
