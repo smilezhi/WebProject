@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+     <style>
+		 *{
+    	 	padding:0;
+    	 	margin:0;
+    	 }
+     	.box1{
+     		width:258px;
+     		height:40px;
+     		margin:200px auto;
+     		background-color: pink;
+     	}
+     	.box1 input{
+     		float:left;
+     		width: 208px;
+     		height:40px;
+     		background: url(images/left.jpg) no-repeat;
+     		border:0 none;
+     		padding:0;
+			outline-style:none;
+			padding-left:8px;
+			color:#ccc;
+     	}
+     	.box1 button{
+     		float:left;
+     		border:0 none;
+     		padding:0;
+     		width:42px;
+     		height: 40px;
+     		background: url(images/right.jpg);
+     	}
+     </style>
+</head>
+<body>
+	<div class="box1">
+		<input type="txt" id="txt" value="请输入...">
+		<button id="btn"></button>
+	</div>
+	<script>
+		window.onload = function(){
+			var txt = document.getElementById('txt');
+			txt.focus();
+			txt.onfocus = function() {
+				if (txt.value == '请输入...'){
+					txt.value = ""; 
+					txt.style.color = "#444";
+				}
+			}
+			txt.onblur = function(){
+				if (txt.value == ''){
+					txt.value = '请输入...'
+					txt.style.color = '#ccc';
+				}
+
+			}
+		}
+	</script>
+</body>
+</html>
